@@ -258,8 +258,8 @@ class ProjectTaskMaterial(models.Model):
         # analytical line is not correct.
         for sel in self.filtered(lambda x: x.stock_move_id.state == 'done' and
                                  x.analytic_line_id.amount !=
-                                 x.stock_move_id.value):
-            sel.analytic_line_id.amount = sel.stock_move_id.value
+                                 x.stock_move_id.price_unit):
+            sel.analytic_line_id.amount = sel.stock_move_id.price_unit
 
     def unlink(self):
         self.unlink_stock_move()

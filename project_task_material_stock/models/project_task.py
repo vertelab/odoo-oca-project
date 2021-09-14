@@ -36,10 +36,8 @@ class Task(models.Model):
                 task.stock_state = 'pending'
             else:
                 states = task.mapped("stock_move_ids.state")
-                for state in ("confirmed", "assigned", "done"):
-                    if state in states:
-                        task.stock_state = state
-                        break
+                for state in states:
+                    task.stock_state = state
 
     picking_id = fields.Many2one(
         "stock.picking",
@@ -66,7 +64,10 @@ class Task(models.Model):
     stock_state = fields.Selection(
         selection=[
             ('pending', 'Pending'),
+            ('draft', 'New'), ('cancel', 'Cancelled'),
+            ('waiting', 'Waiting Another Move'),
             ('confirmed', 'Confirmed'),
+            ('partially_available', 'Partially Available'),
             ('assigned', 'Assigned'),
             ('done', 'Done')],
         compute='_compute_stock_state',

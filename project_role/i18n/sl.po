@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 13.0\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2020-03-21 11:13+0000\n"
-"Last-Translator: Matjaz Mozetic <matjaz@matmoz.si>\n"
+"PO-Revision-Date: 2023-04-12 12:32+0000\n"
+"Last-Translator: Matjaz Mozetic <matjaz@luxim.si>\n"
 "Language-Team: none\n"
 "Language: sl\n"
 "MIME-Version: 1.0\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=4; plural=n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n"
 "%100==4 ? 2 : 3;\n"
-"X-Generator: Weblate 3.10\n"
+"X-Generator: Weblate 4.14.1\n"
 
 #. module: project_role
 #: code:addons/project_role/models/project_role.py:0
@@ -69,7 +69,7 @@ msgstr ""
 #. module: project_role
 #: model:ir.model.fields,field_description:project_role.field_project_assignment__message_needaction
 msgid "Action Needed"
-msgstr "Potrebno je ukrepanje"
+msgstr "Potrebno ukrepanje"
 
 #. module: project_role
 #: model:ir.model.fields,field_description:project_role.field_project_assignment__active
@@ -78,7 +78,10 @@ msgid "Active"
 msgstr "Aktivno"
 
 #. module: project_role
+#: model_terms:ir.ui.view,arch_db:project_role.project_assignment_form
+#: model_terms:ir.ui.view,arch_db:project_role.project_assignment_search
 #: model_terms:ir.ui.view,arch_db:project_role.project_role_search
+#: model_terms:ir.ui.view,arch_db:project_role.project_role_view_form
 msgid "Archived"
 msgstr "Arhivirano"
 
@@ -166,7 +169,10 @@ msgstr "Opis"
 
 #. module: project_role
 #: model:ir.model.fields,field_description:project_role.field_project_assignment__display_name
+#: model:ir.model.fields,field_description:project_role.field_project_project__display_name
 #: model:ir.model.fields,field_description:project_role.field_project_role__display_name
+#: model:ir.model.fields,field_description:project_role.field_res_company__display_name
+#: model:ir.model.fields,field_description:project_role.field_res_config_settings__display_name
 msgid "Display Name"
 msgstr "Prikazani naziv"
 
@@ -192,7 +198,10 @@ msgstr "Združi po"
 
 #. module: project_role
 #: model:ir.model.fields,field_description:project_role.field_project_assignment__id
+#: model:ir.model.fields,field_description:project_role.field_project_project__id
 #: model:ir.model.fields,field_description:project_role.field_project_role__id
+#: model:ir.model.fields,field_description:project_role.field_res_company__id
+#: model:ir.model.fields,field_description:project_role.field_res_config_settings__id
 msgid "ID"
 msgstr "ID"
 
@@ -204,16 +213,10 @@ msgstr "Če označeno pomeni, da nova sporočila zahtevajo vašo pozornost."
 
 #. module: project_role
 #: model:ir.model.fields,help:project_role.field_project_assignment__message_has_error
-#: model:ir.model.fields,help:project_role.field_project_assignment__message_has_sms_error
 msgid "If checked, some messages have a delivery error."
 msgstr ""
 "Če označeno pomeni, da je pri nekaterih sporočilih prišlo do napake pri "
 "dostavi."
-
-#. module: project_role
-#: model_terms:ir.ui.view,arch_db:project_role.project_assignment_search
-msgid "Inactive"
-msgstr "Neaktivno"
 
 #. module: project_role
 #: model:ir.model.fields,field_description:project_role.field_project_project__inherit_assignments
@@ -227,7 +230,10 @@ msgstr "Je sledilec"
 
 #. module: project_role
 #: model:ir.model.fields,field_description:project_role.field_project_assignment____last_update
+#: model:ir.model.fields,field_description:project_role.field_project_project____last_update
 #: model:ir.model.fields,field_description:project_role.field_project_role____last_update
+#: model:ir.model.fields,field_description:project_role.field_res_company____last_update
+#: model:ir.model.fields,field_description:project_role.field_res_config_settings____last_update
 msgid "Last Modified on"
 msgstr "Zadnjič spremenjeno"
 
@@ -295,7 +301,7 @@ msgstr "Število napak"
 #. module: project_role
 #: model:ir.model.fields,help:project_role.field_project_assignment__message_needaction_counter
 msgid "Number of messages which requires an action"
-msgstr "Število sporočil, ki potrebujejo ukrepanje"
+msgstr "Število sporočil, kjer je potrebno ukrepati"
 
 #. module: project_role
 #: model:ir.model.fields,help:project_role.field_project_assignment__message_has_error_counter
@@ -386,12 +392,6 @@ msgid "Roles &amp; Assignments"
 msgstr "Vloge in zadolžitve"
 
 #. module: project_role
-#: model:ir.model.fields,field_description:project_role.field_project_assignment__message_has_sms_error
-#, fuzzy
-msgid "SMS Delivery error"
-msgstr "Napaka ob dostavi sporočila"
-
-#. module: project_role
 #: model_terms:ir.ui.view,arch_db:project_role.res_config_settings_view_form
 msgid "Setup project roles"
 msgstr "Nastavi projektne vloge"
@@ -447,18 +447,25 @@ msgstr "Uporabniku se lahko dodeli določeno vlogo le enkrat!"
 #. module: project_role
 #: model:ir.model.fields,field_description:project_role.field_project_assignment__website_message_ids
 msgid "Website Messages"
-msgstr "Spletna sporočila"
+msgstr "Sporočila spletne strani"
 
 #. module: project_role
 #: model:ir.model.fields,help:project_role.field_project_assignment__website_message_ids
 msgid "Website communication history"
-msgstr "Spletna kronologija komunikacij"
-
-#~ msgid "If checked new messages require your attention."
-#~ msgstr "Če označeno pomeni, da nova sporočila zahtevajo vašo pozornost."
+msgstr "Kronologija komunikacij spletne strani"
 
 #~ msgid "WBS element"
 #~ msgstr "Projektni člen"
+
+#, fuzzy
+#~ msgid "SMS Delivery error"
+#~ msgstr "Napaka ob dostavi sporočila"
+
+#~ msgid "Inactive"
+#~ msgstr "Neaktivno"
+
+#~ msgid "If checked new messages require your attention."
+#~ msgstr "Če označeno pomeni, da nova sporočila zahtevajo vašo pozornost."
 
 #~ msgid "You cannot create recursive roles."
 #~ msgstr "Rekurzivne vloge niso dovoljene."

@@ -9,15 +9,15 @@ msgstr ""
 "Project-Id-Version: Odoo Server 10.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-08-10 02:49+0000\n"
-"PO-Revision-Date: 2019-09-13 21:24+0000\n"
-"Last-Translator: gslabit <giovanni@gslab.it>\n"
+"PO-Revision-Date: 2023-04-12 12:35+0000\n"
+"Last-Translator: mymage <stefano.consolaro@mymage.it>\n"
 "Language-Team: Italian (https://www.transifex.com/oca/teams/23907/it/)\n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.8\n"
+"X-Generator: Weblate 4.14.1\n"
 
 #. module: project_task_default_stage
 #: model:project.task.type,name:project_task_default_stage.project_tt_analysis
@@ -39,7 +39,7 @@ msgstr "Bloccato"
 #. module: project_task_default_stage
 #: model:project.task.type,name:project_task_default_stage.project_tt_cancel
 msgid "Cancelled"
-msgstr "Cancellato"
+msgstr "Annullato"
 
 #. module: project_task_default_stage
 #: model:ir.model.fields,field_description:project_task_default_stage.field_project_task_type__case_default
@@ -57,9 +57,21 @@ msgid "Development"
 msgstr "Sviluppo"
 
 #. module: project_task_default_stage
+#: model:ir.model.fields,field_description:project_task_default_stage.field_project_project__display_name
+#: model:ir.model.fields,field_description:project_task_default_stage.field_project_task_type__display_name
+msgid "Display Name"
+msgstr "Nome visualizzato"
+
+#. module: project_task_default_stage
 #: model:project.task.type,name:project_task_default_stage.project_tt_deployment
 msgid "Done"
 msgstr "Completato"
+
+#. module: project_task_default_stage
+#: model:ir.model.fields,field_description:project_task_default_stage.field_project_project__id
+#: model:ir.model.fields,field_description:project_task_default_stage.field_project_task_type__id
+msgid "ID"
+msgstr "ID"
 
 #. module: project_task_default_stage
 #: model:ir.model.fields,help:project_task_default_stage.field_project_task_type__case_default
@@ -81,6 +93,12 @@ msgstr ""
 #: model:project.task.type,legend_normal:project_task_default_stage.project_tt_testing
 msgid "In Progress"
 msgstr "In corso"
+
+#. module: project_task_default_stage
+#: model:ir.model.fields,field_description:project_task_default_stage.field_project_project____last_update
+#: model:ir.model.fields,field_description:project_task_default_stage.field_project_task_type____last_update
+msgid "Last Modified on"
+msgstr "Ultima modifica il"
 
 #. module: project_task_default_stage
 #: model:project.task.type,name:project_task_default_stage.project_tt_merge
@@ -106,8 +124,8 @@ msgstr "Fasi Progetto"
 #: model:project.task.type,legend_done:project_task_default_stage.project_tt_merge
 #: model:project.task.type,legend_done:project_task_default_stage.project_tt_specification
 #: model:project.task.type,legend_done:project_task_default_stage.project_tt_testing
-msgid "Ready for Next Stage"
-msgstr "Pronto per la prossima fase"
+msgid "Ready"
+msgstr "Pronto"
 
 #. module: project_task_default_stage
 #: model:project.task.type,name:project_task_default_stage.project_tt_specification
@@ -127,4 +145,10 @@ msgstr "Fasi lavori"
 #. module: project_task_default_stage
 #: model:project.task.type,name:project_task_default_stage.project_tt_testing
 msgid "Testing"
-msgstr ""
+msgstr "In test"
+
+#~ msgid "WBS element"
+#~ msgstr "Elemento WBS"
+
+#~ msgid "Ready for Next Stage"
+#~ msgstr "Pronto per la prossima fase"

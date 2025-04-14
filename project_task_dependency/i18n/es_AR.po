@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 14.0\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2021-04-01 03:48+0000\n"
+"PO-Revision-Date: 2023-02-21 00:08+0000\n"
 "Last-Translator: Ignacio Buioli <ibuioli@gmail.com>\n"
 "Language-Team: none\n"
 "Language: es_AR\n"
@@ -14,7 +14,17 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.3.2\n"
+"X-Generator: Weblate 4.14.1\n"
+
+#. module: project_task_dependency
+#: model_terms:ir.ui.view,arch_db:project_task_dependency.project_task_form
+msgid "<span class=\"o_stat_text\"> Blocked</span>"
+msgstr "<span class=\"o_stat_text\"> Bloqueado</span>"
+
+#. module: project_task_dependency
+#: model_terms:ir.ui.view,arch_db:project_task_dependency.view_task_kanban_blocked
+msgid "Blocked"
+msgstr "Bloqueado"
 
 #. module: project_task_dependency
 #: model:ir.model.fields,field_description:project_task_dependency.field_project_task_copy_map__create_uid
@@ -31,6 +41,11 @@ msgstr "Creado en"
 #: model_terms:ir.ui.view,arch_db:project_task_dependency.project_task_form
 msgid "Dependencies"
 msgstr "Dependencias"
+
+#. module: project_task_dependency
+#: model:ir.model.fields,field_description:project_task_dependency.field_project_task__dependent_tasks_count
+msgid "Dependent Tasks"
+msgstr "Tareas Dependientes"
 
 #. module: project_task_dependency
 #: model:ir.model.fields,field_description:project_task_dependency.field_project_task__depending_task_ids
@@ -79,6 +94,11 @@ msgid "Old Task"
 msgstr "Tarea Vieja"
 
 #. module: project_task_dependency
+#: model_terms:ir.ui.view,arch_db:project_task_dependency.project_task_form
+msgid "Open Task"
+msgstr "Abrir Tarea"
+
+#. module: project_task_dependency
 #: model:ir.model,name:project_task_dependency.model_project_project
 msgid "Project"
 msgstr "Proyecto"
@@ -99,7 +119,9 @@ msgid "Recursive Depending Tasks"
 msgstr "Recursividad de Tareas Dependientes"
 
 #. module: project_task_dependency
+#: code:addons/project_task_dependency/models/project_task.py:0
 #: model:ir.model,name:project_task_dependency.model_project_task
+#, python-format
 msgid "Task"
 msgstr "Tarea"
 
@@ -118,3 +140,6 @@ msgstr "Tareas que dependen de esta tarea."
 #, python-format
 msgid "You cannot create recursive dependencies between tasks."
 msgstr "No puede crear dependencias recursivas entre tareas."
+
+#~ msgid "WBS element"
+#~ msgstr "Elemento WBS"

@@ -14,6 +14,7 @@
                     name="tag_ids"
                     widget="many2many_tags"
                     options="{'color_field': 'color'}"
+                    optional="show"
                 />
             </field>
         </field>
@@ -25,21 +26,21 @@
         <field name="inherit_id" ref="project.edit_project" />
         <field name="type">form</field>
         <field name="arch" type="xml">
-            <xpath
-                expr="//div[hasclass('oe_title')]/h1[./field[@name='name']]"
-                position="after"
-            >
-                <h4>
-                    <field
-                        name="tag_ids"
-                        placeholder="Tags..."
-                        widget="many2many_tags"
-                        options="{'color_field': 'color'}"
-                    />
-                </h4>
+            <xpath expr="//page[@name='settings']/group/group" position="inside">
+                <field name="tags_required" />
+            </xpath>
+            <xpath expr="//div[@name='options_active']" position="inside">
+                <label for="tag_ids" class="pr-2" />
+                <field
+                    name="tag_ids"
+                    placeholder="Tags..."
+                    widget="many2many_tags"
+                    options="{'color_field': 'color'}"
+                />
             </xpath>
         </field>
     </record>
+
     <!-- Simplified Form View -->
     <record id="project_tags_view_inherit_simple" model="ir.ui.view">
         <field name="name">project.tags.simpleform</field>
@@ -82,4 +83,5 @@
             </xpath>
         </field>
     </record>
+
 </odoo>

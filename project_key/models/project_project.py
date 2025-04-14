@@ -120,13 +120,17 @@ class Project(models.Model):
 
     def get_next_task_key(self):
         test_project_key = self.env.context.get("test_project_key")
-        if config["test_enable"] and not test_project_key:
+        if (config["test_enable"] and not test_project_key) or (
+            config["demo"].get("project_key") and not test_project_key
+        ):
             return False
         return self.sudo().task_key_sequence_id.next_by_id()
 
     def generate_project_key(self, text):
         test_project_key = self.env.context.get("test_project_key")
-        if config["test_enable"] and not test_project_key:
+        if (config["test_enable"] and not test_project_key) or (
+            config["demo"].get("project_key") and not test_project_key
+        ):
             return False
 
         if not text:
@@ -134,12 +138,24 @@ class Project(models.Model):
 
         data = text.split(" ")
         if len(data) == 1:
-            return data[0][:3].upper()
+            return self._generate_project_unique_key(data[0][:3].upper())
 
         key = []
         for item in data:
             key.append(item[:1].upper())
-        return "".join(key)
+        return self._generate_project_unique_key("".join(key))
+
+    def _generate_project_unique_key(self, text):
+        res = text
+        unique_key = False
+        counter = 0
+        while not unique_key:
+            if counter != 0:
+                res = "%s%s" % (text, counter)
+            unique_key = not bool(self.search([("key", "=", res)]))
+            counter += 1
+
+        return res
 
     def _update_task_keys(self):
         """

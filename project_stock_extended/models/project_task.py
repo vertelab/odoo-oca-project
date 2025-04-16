@@ -121,11 +121,11 @@ class ProjectTask(models.Model):
                         task.stock_state = state
                         break
 
-    @api.depends("move_ids", "move_ids.quantity_done")
+    @api.depends("move_ids", "move_ids.quantity")
     def _compute_unreserve_visible(self):
         for item in self:
             already_reserved = item.mapped("move_ids.move_line_ids")
-            any_quantity_done = any([m.quantity_done > 0 for m in item.move_ids])
+            any_quantity_done = any([m.quantity > 0 for m in item.move_ids])
             item.unreserve_visible = not any_quantity_done and already_reserved
 
     @api.onchange("picking_type_id")
@@ -219,7 +219,7 @@ class ProjectTask(models.Model):
         for move in self.mapped("move_ids").filtered(
             lambda x: x.state not in ("done", "cancel")
         ):
-            move.quantity_done = move.reserved_availability
+            move.quantity = move.availability
         moves_todo = self.mapped("move_ids")._action_done()
         # Use sudo to avoid error for users with no access to analytic
         analytic_line_model = self.env["account.analytic.line"].sudo()

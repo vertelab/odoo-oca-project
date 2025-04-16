@@ -118,11 +118,20 @@
                     <field name="allow_moves_action_confirm" invisible="1" />
                     <field name="allow_moves_action_assign" invisible="1" />
                     <field name="unreserve_visible" invisible="1" />
-                    <field
+                    <!--<field
                         name="move_ids"
                         context="{'tree_view_ref': 'project_stock.view_stock_move_raw_tree', 'form_view_ref':'stock.view_move_form', 'default_company_id': company_id, 'default_state': 'draft', 'default_raw_material_task_id': id}"
                         readonly="done_stock_moves and stock_moves_is_locked"
-                    />
+                    />-->
+                    <field name="move_ids" context="{'form_view_ref':'stock.view_move_form', 'default_company_id': company_id, 'default_state': 'draft', 'default_raw_material_task_id': id}">
+                        <list>
+                            <field name="date_deadline"/>
+                            <field name="origin"/>
+                            <field name="product_id"/>
+                            <field name="product_uom_qty"/>
+                            <field name="state"/>
+                        </list>
+                    </field>
                 </page>
             </xpath>
             <xpath expr="///page[@name='extra_info']/group[1]" position="inside">

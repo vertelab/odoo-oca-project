@@ -14,14 +14,7 @@
         <field name="model">stock.move</field>
         <field name="priority">1000</field>
         <field name="arch" type="xml">
-            <tree
-                editable="bottom"
-                default_order="sequence"
-                decoration-muted="state in ('done', 'cancel')"
-                decoration-warning="quantity_done - product_uom_qty &gt; 0.0001"
-                decoration-success="state not in ('done', 'cancel') and quantity_done - product_uom_qty &lt; 0.0001"
-                decoration-danger="state not in ('done', 'cancel') and reserved_availability &lt; product_uom_qty and product_uom_qty - reserved_availability &gt; 0.0001"
-            >
+            <list>
                 <field name="company_id" invisible="1" />
                 <field
                     name="product_id"
@@ -62,14 +55,14 @@
                     invisible="not product_id or state in ['done', 'cancel']"
                 />
                 <field name="product_uom_category_id" invisible="1" />
-                <field
-                    name="reserved_availability"
-                    invisible="state in ['done', 'cancel']"
-                    string="Reserved"
-                />
-                <field name="quantity_done" string="Consumed" readonly="1" />
+<!--                <field-->
+<!--                    name="reserved_availability"-->
+<!--                    invisible="state in ['done', 'cancel']"-->
+<!--                    string="Reserved"-->
+<!--                />-->
+                <field name="quantity" string="Consumed" readonly="1" />
                 <field name="group_id" invisible="1" />
-            </tree>
+            </list>
         </field>
     </record>
 </odoo>

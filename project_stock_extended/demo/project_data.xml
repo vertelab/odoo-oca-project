@@ -2,7 +2,7 @@
 <odoo noupdate="1">
     <record id="project_project_tm_test" model="project.project">
         <field name="name">Task material</field>
-        <field name="picking_type_id" ref="project_stock.stock_picking_type_tm_test" />
+        <field name="picking_type_id" ref="project_stock_extended.stock_picking_type_tm_test" />
         <field name="location_id" ref="stock.stock_location_stock" />
         <field name="location_dest_id" ref="stock.stock_location_components" />
         <field name="stock_analytic_date">1990-01-01</field>

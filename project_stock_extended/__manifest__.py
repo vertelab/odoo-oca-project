@@ -4,7 +4,7 @@
     "name": "Project Stock",
     "version": "18.0.1.3.1",
     "category": "Project Management",
-    "website": "https://github.com/OCA/project",
+    "website": "https://vertel.se/apps/odoo-oca-project/project_stock_extended",
     "author": "Tecnativa, Odoo Community Association (OCA)",
     "license": "AGPL-3",
     "depends": ["project", "stock"],

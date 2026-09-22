@@ -4,7 +4,7 @@
     "name": "Project Tag Hierarchy",
     "version": "18.0.1.0.0",
     "category": "Project Management",
-    "website": "https://github.com/OCA/project",
+    "website": "https://vertel.se/apps/odoo-oca-project/project_tag_hierarchy",
     "author": "Tecnativa, Odoo Community Association (OCA)",
     "license": "AGPL-3",
     "depends": ["project"],

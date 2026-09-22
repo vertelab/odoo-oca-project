@@ -5,7 +5,7 @@
     "name": "Project Stage Last Update Date",
     "version": "18.0.1.0.0",
     "category": "Project",
-    "website": "https://github.com/OCA/project",
+    "website": "https://vertel.se/apps/odoo-oca-project/project_stage_last_update_date",
     "author": "Tecnativa, Odoo Community Association (OCA)",
     "license": "AGPL-3",
     "installable": True,

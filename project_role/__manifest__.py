@@ -6,7 +6,7 @@
     "name": "Project Roles",
     "version": "18.0.1.0.0",
     "category": "Project",
-    "website": "https://github.com/OCA/project",
+    "website": "https://vertel.se/apps/odoo-oca-project/project_role",
     "author": "CorporateHub, Odoo Community Association (OCA)",
     "license": "AGPL-3",
     "installable": True,

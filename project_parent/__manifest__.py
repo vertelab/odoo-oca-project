@@ -6,7 +6,7 @@
     "license": "LGPL-3",
     "category": "project",
     "author": "Therp B.V., Elico Corp, Odoo Community Association (OCA)",
-    "website": "https://github.com/OCA/project",
+    "website": "https://vertel.se/apps/odoo-oca-project/project_parent",
     "depends": ["project"],
     "data": ["views/project_parent_views.xml"],
     "demo": ["demo/project_project_demo.xml"],

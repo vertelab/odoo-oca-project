@@ -7,7 +7,7 @@
     "version": "18.0.1.0.0",
     "category": "Project",
     "author": "ADHOC SA," "Tecnativa, " "Onestein, " "Odoo Community Association (OCA)",
-    "website": "https://github.com/OCA/project",
+    "website": "https://vertel.se/apps/odoo-oca-project/project_type",
     "license": "AGPL-3",
     "depends": ["project"],
     "data": [

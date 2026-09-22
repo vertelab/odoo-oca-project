@@ -7,7 +7,7 @@
     "version": "18.0.1.0.0",
     "development_status": "Alpha",
     "category": "Services/Project",
-    "website": "https://github.com/OCA/project",
+    "website": "https://vertel.se/apps/odoo-oca-project/project_sequence",
     "author": "Moduon, Odoo Community Association (OCA)",
     "maintainers": ["yajo", "anddago78"],
     "license": "LGPL-3",

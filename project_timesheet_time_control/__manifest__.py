@@ -10,7 +10,7 @@
     "category": "Project",
     "author": "Tecnativa," "Odoo Community Association (OCA)",
     "maintainers": ["ernestotejeda"],
-    "website": "https://github.com/OCA/project",
+    "website": "https://vertel.se/apps/odoo-oca-project/project_timesheet_time_control",
     "depends": [
         "hr_timesheet",
     ],

@@ -10,7 +10,7 @@
     "maintainers": ["astirpe"],
     "license": "AGPL-3",
     "category": "Project",
-    "website": "https://github.com/OCA/project",
+    "website": "https://vertel.se/apps/odoo-oca-project/project_task_add_very_high",
     "depends": ["project"],
     "data": ["views/project_task_view.xml"],
     "installable": True,

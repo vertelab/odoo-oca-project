@@ -3,6 +3,17 @@
 
 {
     "name": "Pivot view for projects",
+    'summary': "Adds a pivot view for projects.",
+    'description': '''
+Pivot view for projects
+=======================
+
+    Adds a pivot view for projects.
+
+    Features:
+
+        - UI Integration: Extends 1 view(s) in the Odoo interface.
+    ''',
     "version": "18.0.1.0.0",
     "category": "Project",
     "website": "https://vertel.se/apps/odoo-oca-project/project_pivot",

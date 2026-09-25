@@ -2,6 +2,18 @@
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl).
 {
     "name": "Project Stock",
+    'summary': "Links projects to stock moves.",
+    'description': '''
+Project Stock
+=============
+
+    Links projects to stock moves.
+
+    Features:
+
+        - UI Integration: Extends 4 view(s) in the Odoo interface.
+        - Extends Odoo: Builds on account.analytic.account, account.analytic.line, procurement.group, project.project.
+    ''',
     "version": "18.0.1.3.1",
     "category": "Project Management",
     "website": "https://vertel.se/apps/odoo-oca-project/project_stock_extended",

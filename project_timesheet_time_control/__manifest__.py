@@ -6,6 +6,19 @@
 
 {
     "name": "Project timesheet time control",
+    'summary': "Adds time control to project timesheets.",
+    'description': '''
+Project timesheet time control
+==============================
+
+    Adds time control to project timesheets.
+
+    Features:
+
+        - Guided Wizards: Step-by-step dialogs for data entry.
+        - UI Integration: Extends 3 view(s) in the Odoo interface.
+        - Extends Odoo: Builds on account.analytic.line, hr.timesheet.time_control.mixin, project.project, project.task.
+    ''',
     "version": "18.0.1.0.3",
     "category": "Project",
     "author": "Tecnativa," "Odoo Community Association (OCA)",
